@@ -1,57 +1,48 @@
-# React + TypeScript + Vite
+## 启动指南
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+要启动此项目，请按照以下步骤操作：
 
-Currently, two official plugins are available:
+### 1. 克隆仓库
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+首先，将项目仓库克隆到你的本地机器：
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+git clone https://github.com/labixiaoji/IST-Lottery.git
+cd IST-Lottery
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. 安装依赖
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+进入项目目录后，安装所有必要的依赖：
 
-export default tseslint.config({
-  extends: [
-    // other configs...
-    // Enable lint rules for React
-    reactX.configs['recommended-typescript'],
-    // Enable lint rules for React DOM
-    reactDom.configs.recommended,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm install
+```
+
+### 3. 运行开发服务器
+
+安装完依赖后，你可以启动开发服务器：
+
+```bash
+npm run dev
+```
+
+这将在本地启动一个开发服务器，通常在 `http://localhost:5173` 或其他可用端口。你可以在浏览器中打开此地址来查看应用程序。
+
+### 4. 构建生产版本
+
+如果你想为生产环境构建应用程序：
+
+```bash
+npm run build
+```
+
+这将在 `dist` 文件夹中生成一个优化过的生产版本。
+
+### 5. 预览生产版本
+
+构建完成后，你可以本地预览生产版本：
+
+```bash
+npm run preview
 ```
